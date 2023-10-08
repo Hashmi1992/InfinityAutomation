@@ -9,7 +9,13 @@ module.exports = defineConfig({
       "overwrite": false,
       "html": true,
       "json": true,
-      "reportDir": "cypress/reports"
+      "reportDir": "cypress/reports",
+      
+      "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "video": true,
+  "screenshotsFolder": "cypress/screenshots",
+  "videosFolder": "cypress/videos"
 
     },
 
