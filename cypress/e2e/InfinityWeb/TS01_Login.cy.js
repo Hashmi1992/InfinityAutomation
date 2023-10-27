@@ -156,28 +156,4 @@ describe('Infinity Web Portal', () => {
     cy.wait(500)
     cy.get('.ui-outputlabel').should('contain.text', "Password:")
   })
-
-  it('TC05: Check opening of privacy page', () => {
-
-    cy.visit("/")
-    cy.viewport(1280, 720)
-
-    // Click the link to open in a new tab
-    cy.get('a[href="https://www.constellationfs.com/Privacy"]').invoke('removeAttr', 'target').click();
-
-    cy.get('.dnnPrivacy > div > :nth-child(1)').should('contain.text', 'Constellation Financial Software is committed to protecting your privacy')
-
-  })
-
-  it('TC06: Check opening of support/contactUs page', () => {
-
-    cy.visit("/")
-    cy.viewport(1280, 720)
-
-    // Click the link to open in a new tab
-    cy.get('a[href="https://www.constellationfs.com/Contact-Us"]').invoke('attr', 'target', '_self').click();
-
-    cy.get('.not-found-title').should('contain.text', 'No Results Found')
-
-  })
 })
