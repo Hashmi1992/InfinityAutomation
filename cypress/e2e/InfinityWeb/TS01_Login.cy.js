@@ -167,6 +167,8 @@ describe('Infinity Web Portal', () => {
     loginpage.Signin();
   
      cy.get("#ContractData-tab").should('be.visible').click()
+cy.wait(2000)
+     cy.get("#BillingDetail-tab").should('be.visible').click()
 
   })
 
