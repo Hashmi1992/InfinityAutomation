@@ -156,4 +156,18 @@ describe('Infinity Web Portal', () => {
     cy.wait(500)
     cy.get('.ui-outputlabel').should('contain.text', "Password:")
   })
+
+  it('TC05: login and click any tab', () => {
+
+    loginpage.enterUsername('apak');
+    cy.wait(1000);
+    loginpage.enterPassword('apak');
+    cy.wait(1000);
+  
+    loginpage.Signin();
+  
+     cy.get("#ContractData-tab").should('be.visible').click()
+
+  })
+
 })
