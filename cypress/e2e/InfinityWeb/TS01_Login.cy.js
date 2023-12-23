@@ -149,12 +149,12 @@ describe('Infinity Web Portal', () => {
     cy.get('.ui-outputlabel').should('contain.text', "Mot de Passe:")
     cy.wait(2000)
 
-    // //change back to English
-    // cy.get('#dd-language-anony').should('be.visible').select('English')
-    // cy.wait(2000)
-    // cy.get('.text-primary').should('contain.text', 'Sign In')
-    // cy.wait(500)
-    // cy.get('.ui-outputlabel').should('contain.text', "Password:")
+    //change back to English
+    cy.get('#dd-language-anony').should('be.visible').select('English')
+    cy.wait(2000)
+    cy.get('.text-primary').should('contain.text', 'Sign In')
+    cy.wait(500)
+    cy.get('.ui-outputlabel').should('contain.text', "Password:")
   })
 
   it('TC05: login and click any tab', () => {
