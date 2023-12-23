@@ -1,9 +1,10 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: '8aqao6',
   e2e: {
 
-    "baseUrl": "https://infinityassettest.constellationfs.com/CFS817xInfinityasset/Account/Login?ReturnUrl=%2FCFS817xInfinityasset%2F",
+    "baseUrl": "https://infinityassettest.constellationfs.com/CFS818xInfinityasset/Account/Login?ReturnUrl=%2FCFS818xInfinityasset%2F",
     "reporter": "mochawesome",
     "reporterOptions": {
       "charts": true,

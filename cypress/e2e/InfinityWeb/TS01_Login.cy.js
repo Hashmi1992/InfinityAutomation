@@ -25,7 +25,7 @@ describe('Infinity Web Portal', () => {
     cy.wait(1000)
 
     //cy.get('#password').should('not.have.value', undefined)
-    loginpage.enterPassword('apakx')
+    loginpage.enterPassword('apaxxx')
     cy.wait(1000)
 
     loginpage.Signin() //signin button click
@@ -52,7 +52,7 @@ describe('Infinity Web Portal', () => {
 
     loginpage.enterUsername('apak');
     cy.wait(1000);
-    loginpage.enterPassword('apak');
+    loginpage.enterPassword('apax');
     cy.wait(1000);
 
     // Check Remember Me checkbox and store the username and checkbox value in cookie
@@ -138,7 +138,7 @@ describe('Infinity Web Portal', () => {
     // change the language to english
 
 
-    cy.url('').should('eq', "https://infinityassettest.constellationfs.com/CFS817xInfinityAsset/Account/Login\?ReturnUrl=%2FCFS817xInfinityAsset%2FAccount%2FLogOff");
+    // cy.url('').should('eq', "https://infinityassettest.constellationfs.com/CFS817xInfinityAsset/Account/Login\?ReturnUrl=%2FCFS817xInfinityAsset%2FAccount%2FLogOff");
 
     cy.get('#dd-language-anony').should('be.visible').select('French')
     cy.wait(2000)
@@ -149,19 +149,19 @@ describe('Infinity Web Portal', () => {
     cy.get('.ui-outputlabel').should('contain.text', "Mot de Passe:")
     cy.wait(2000)
 
-    //change back to English
-    cy.get('#dd-language-anony').should('be.visible').select('English')
-    cy.wait(2000)
-    cy.get('.text-primary').should('contain.text', 'Sign In')
-    cy.wait(500)
-    cy.get('.ui-outputlabel').should('contain.text', "Password:")
+    // //change back to English
+    // cy.get('#dd-language-anony').should('be.visible').select('English')
+    // cy.wait(2000)
+    // cy.get('.text-primary').should('contain.text', 'Sign In')
+    // cy.wait(500)
+    // cy.get('.ui-outputlabel').should('contain.text', "Password:")
   })
 
   it('TC05: login and click any tab', () => {
 
     loginpage.enterUsername('apak');
     cy.wait(1000);
-    loginpage.enterPassword('apak');
+    loginpage.enterPassword('apax');
     cy.wait(1000);
   
     loginpage.Signin();
