@@ -12,7 +12,7 @@ module.exports = defineConfig({
     pageLoadTimeout: 10000000,
     chromeWebSecurity: false,
     experimentalMemoryManagement: true,
-    numTestsKeptInMemory: 0, 
+    numTestsKeptInMemory: 1, 
     testIsolation: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here

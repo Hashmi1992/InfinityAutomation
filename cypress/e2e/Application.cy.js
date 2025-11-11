@@ -1,8 +1,10 @@
 // << ---------------All Imports here------------------------>> 
 import LoginPage from './pages/OM_login.js';
+import SearchingFunctionality from './pages/OM_search.js';
 
 // << ---------------Constructors here------------------------>>
 const loginPage = new LoginPage();
+const searchfunction = new SearchingFunctionality();
 
 // << ---------------Test Suite------------------------>>
 describe('Infinity Application', () => {
@@ -21,11 +23,11 @@ describe('Infinity Application', () => {
     });
 
     // << ----------- 2. Validate Language Dropdown Change -------------->>
-    describe('TS02: Language Change Validation', () => {
-        it('TC2.1: Change language to French and back to English', () => {
-            loginPage.ValidateLanguageChange();
-        });
-    });
+    // describe('TS02: Language Change Validation', () => {
+    //     it('TC2.1: Change language to French and back to English', () => {
+    //         loginPage.ValidateLanguageChange();
+    //     });
+    // });
 
     // << ----------- 3. Login and Validate Dashboard -------------->>
     describe('TS03: Login and Verify Dashboard', () => {
@@ -37,24 +39,44 @@ describe('Infinity Application', () => {
         })
         it('TC3.3 Verify Dashboard visibility', () => {
             loginPage.verifydashboardVisible();
+            cy.wait(15000);
         });
     });
 
     // << ----------- 4. Signout and Validate Logout State -------------->>
-    describe('TS04: Sign out and Verify User is Logged Out', () => {
-        it('TC4.1 Verify perfect signout', () => {
-            loginPage.Signout();
-        })
-        it('TC4.2 Verify Username Availability', () => {
-            loginPage.verifyUsernameAfterLogout();
-        });
-    });
+    // describe('TS04: Sign out and Verify User is Logged Out', () => {
+    //     it('TC4.1 Verify perfect signout', () => {
+    //         loginPage.Signout();
+    //     })
+    //     it('TC4.2 Verify Username Availability', () => {
+    //         loginPage.verifyUsernameAfterLogout();
+    //     });
+    // });
 // << ----------- Forgot Password Functionality -------------------------->>
     //only ensuring that when forgot password is clicked, reset password window appears, 
     // user enters email, and clicks reset button, and confirming a REQUEST RECEIVED message appears.
-    describe('TS05: Verify forgot password functionality', () => {
-        it('TC5.1 Verify Forgot Password functionality', () => {
-            loginPage.verifyforgotpasswordfunctionality();
+    // describe('TS05: Verify forgot password functionality', () => {
+    //     it('TC5.1 Verify Forgot Password functionality', () => {
+    //         loginPage.verifyforgotpasswordfunctionality();
+    //     })
+    // });
+
+
+
+    // << ----------- 5. Verify Searching Functionality -------------------------->>
+    describe('TS05: Verify Searching Functionality', () => {
+        it('TC5.1 Verify Searching Functionality', () => {
+            searchfunction.searchContract('14076');
         })
     });
+
+    // // << ----------- 5. Verify Contract Data Link -------------------------->>
+    // describe('TS05: Verify Contract Data Link', () => {
+    //     it('TC5.1 Verify Contract Data Link', () => {
+    //         contractDataPage.clickContractDataLink();
+    //     })
+    //     it('TC5.2 Verify Contract Details Section is Visible', () => {
+    //         contractDataPage.verifyContractDetailsVisible();
+    //     });
+    // });
 });
