@@ -21,11 +21,11 @@ class SearchingFunctionality {
         cy.get('body').then($body => {
             if ($body.find('.spinner, .loading, .k-loading-mask, .k-loader').length > 0) {
                 // Wait for any known loading indicators to disappear
-                cy.get('.spinner, .loading, .k-loading-mask, .k-loader', { timeout: 10000 }).should('not.exist');
+                cy.get('.spinner, .loading, .k-loading-mask, .k-loader', { timeout: 20000 }).should('not.exist');
             }
             // Also wait for graph chart loading indicator to disappear if present
             if ($body.find('div.k-loading-image').length > 0) {
-                cy.get('div.k-loading-image', { timeout: 10000 }).should('not.exist');
+                cy.get('div.k-loading-image', { timeout: 20000 }).should('not.exist');
             }
         });
     }

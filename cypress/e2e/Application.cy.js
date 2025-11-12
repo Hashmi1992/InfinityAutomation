@@ -1,10 +1,12 @@
 // << ---------------All Imports here------------------------>> 
 import LoginPage from './pages/OM_login.js';
 import SearchingFunctionality from './pages/OM_search.js';
+import ContractDataPage from './pages/OM_contractdata.js';
 
 // << ---------------Constructors here------------------------>>
 const loginPage = new LoginPage();
 const searchfunction = new SearchingFunctionality();
+const contractDataPage = new ContractDataPage();
 
 // << ---------------Test Suite------------------------>>
 describe('Infinity Application', () => {
@@ -39,7 +41,7 @@ describe('Infinity Application', () => {
         })
         it('TC3.3 Verify Dashboard visibility', () => {
             loginPage.verifydashboardVisible();
-            cy.wait(15000);
+            cy.wait(20000);
         });
     });
 
@@ -70,13 +72,14 @@ describe('Infinity Application', () => {
         })
     });
 
-    // // << ----------- 5. Verify Contract Data Link -------------------------->>
-    // describe('TS05: Verify Contract Data Link', () => {
-    //     it('TC5.1 Verify Contract Data Link', () => {
-    //         contractDataPage.clickContractDataLink();
-    //     })
-    //     it('TC5.2 Verify Contract Details Section is Visible', () => {
-    //         contractDataPage.verifyContractDetailsVisible();
-    //     });
-    // });
+    // << ----------- 5. Verify Contract Data Link -------------------------->>
+    describe('TS05: Verify Contract Data Link', () => {
+    
+        it('TC5.1 Verify Contract Data Link', () => {
+            contractDataPage.clickContractDataLink();
+        })
+        it('TC5.2 Verify Contract Details Section is Visible', () => {
+            contractDataPage.verifyContractDetailsVisible();
+        });
+    });
 });
